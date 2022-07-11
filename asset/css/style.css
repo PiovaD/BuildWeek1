@@ -1,0 +1,66 @@
+/*footer*/
+
+/*generic*/
+
+footer section{
+    padding: 50px 0px;
+}
+
+footer div{
+    margin-top: 40px;
+}
+
+footer h3{
+    padding-bottom:20px;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+/*contact*/
+
+.contact li h4 i{
+    color: #555;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+/*photo*/
+
+.photo{
+    display: flex;
+}
+
+.photo li img{
+    margin-right: 20px;
+}
+
+/*link*/
+
+.link{
+    display: flex;  
+}
+
+.link li a i{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: #B0B0B0;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+/*copyright*/
+
+.copyright{
+    padding: 20px 0px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.copyright a{
+    text-decoration: none;
+}
