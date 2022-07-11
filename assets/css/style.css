@@ -104,6 +104,12 @@ input[type="checkbox"]:checked~.nav-menu ul {
 
 /*footer*/
 
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 93%;
+}
+
 /*generic*/
 
 footer section {
@@ -147,13 +153,16 @@ ul {
     display: flex;
 }
 
-.link li a i {
+.link li a{
+    display: block;
+    display: flex;
+    align-items: center;
     width: 40px;
     height: 40px;
     color: white;
     background: #B0B0B0;
     border-radius: 100%;
-    text-align: center;
+    justify-content: center;
     margin-right: 20px;
 }
 
