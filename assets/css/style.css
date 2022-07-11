@@ -91,7 +91,6 @@ input[type="checkbox"]:checked ~ .nav-menu ul{
     height: 230px;
 }
 
-
 .nav-menu a {
     text-transform: uppercase;
     font-size: 1rem;
