@@ -1,0 +1,103 @@
+@font-face {
+    font-family: myfont;
+    src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
+}
+
+body,
+a {
+    font-family: myfont;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*HEADER*/
+.header-img {
+    max-width: 100%;
+}
+
+#top-img {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../images/overlay-pattern.png") #000;
+    opacity: 0.3;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+header {
+    position: sticky;
+    top: 70px;
+    height: 0;
+}
+
+.container {
+
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.6), #ffffff);
+    width: 93%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    bottom: 70px;
+}
+
+.navigator {
+    height: 70px
+}
+
+.logo {
+    position: relative;
+    left: 20px;
+    top: 22px;
+}
+
+.button-container {
+    position: absolute;
+    right: 20px;
+    top: 27px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #e94c3d;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.nav-menu ul{
+    height: 0;
+    overflow: hidden;
+    
+    transition: height 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .nav-menu ul{
+    transition: height 0.5s;
+    height: 230px;
+}
+
+.nav-menu a {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #2E2E2E;
+    margin-left: 15px;
+}
+
+.nav-menu li {
+    padding: 10px 0;
+}
