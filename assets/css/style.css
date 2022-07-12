@@ -1,4 +1,9 @@
 /*GENERAL*/
+@font-face {
+    font-family: youfont;
+    src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
+}
+
 span{
     color: #ff530A;
     font-weight: 600;
@@ -24,7 +29,7 @@ h3 span{
 
 body,
 a {
-    font-family: 'Jost', sans-serif;
+    font-family: youfont!important;
     font-size: 1rem;
 }
 
@@ -354,7 +359,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 #contact-us input, #contact-us textarea{
     display: block;
     width:100%;
-    font-family: 'Jost', sans-serif;
+    font-family: youfont;
     font-size: 0.9rem;
     padding: 6px 12px;
     margin-bottom: 10px;
