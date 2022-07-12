@@ -6,15 +6,20 @@ span{
 }
 
 main p{
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #959595;
-    line-height: 2;
+    line-height: 1.5rem;
     padding-top: 40px;
 }
 
 h1,h2,h3{
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+h3 span{
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 body,
@@ -123,6 +128,29 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 /*MAIN*/
 
+/*slider*/
+
+#slider{
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+#slider div{
+    display: inline-flex;
+}
+
+#slider h3{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#images {
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
 /*restaurnt*/
 
 #restaurant {
@@ -191,7 +219,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 .btn{
-    background-color: #ff530A;
+    background-color: #ff530a;
     padding: 28px 85px;
     position: relative;
     color: white;
@@ -205,7 +233,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 #price{
     width: 93%;
     margin: auto auto;
-    padding: 70px 0;
+    padding: 70px 0px;
 }
 
 #price h1{
@@ -213,25 +241,27 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 #price span, #price h3{
+    font-size: 1.2rem;
     text-transform: uppercase;
+    font-weight: 500;
+
 }
 #price div{
     text-align: left;
-    padding: 70px 0;
+    padding: 70px 0px;
 }
 
 #price li span {
     color: #938463;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 400;
-    padding: 10px 0 0;
-    padding-top: 10px;
+    padding-top: 15px;
     display: block;
     float: none;
 }
 
-#price li p {
-    padding: 12px 0 0;
+#price li p{
+    padding: 12px 0;
 }
 
 #price li{
@@ -239,50 +269,169 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 #price ul{
-    padding: 30px 0;
+    padding: 30px 0px;
 }
-/*footer*/
 
-footer {
+#price .btn{
+    float: right;
+    color: #ff530a;
+    background-color:white;
+    border: 1px solid #ff530a;
+    margin:0;
+}
+
+/*subscribe*/
+
+#subscribe{
+    background-image: url(../images/subscribe-bg.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 200px;
+}
+
+#subscribe h1, #subscribe p{
     margin-left: auto;
     margin-right: auto;
     width: 93%;
+    color: white;
+    position: relative;
+}
+#subscribe h1{
+    text-transform: uppercase;
+    padding: 120px 0 40px;
+    font-size: 1.8rem;
 }
 
-/*generic*/
+#subscribe p{
+    padding: 25px 0;
+    font-size: 1.12rem;
+}
 
-footer section {
-    padding: 50px 0px;
+#subscribe span{
+    text-transform: none;
+}
+
+#subscribe .btn{
+    color: white;
+    background-color: #7ec3bb;
+    margin-top: 20px;
+    font-weight: 600;
+    padding: 25px 60px;
+}
+
+.form{
+    position: relative;
+}
+.form input {    
+    width: 93%;
+    height: 65px;
+    opacity: 0.9;
+    padding: 12px 6px;
+    border: none;
+}
+
+
+/*contact us*/
+
+#contact-us{
+    position: relative;
+    padding: 70px 0;
+    max-width: 93%;
+    margin: auto auto;
+}
+
+#contact-us h1{
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contact-us h3{
+    padding: 20px 0;
+}
+
+#contact-us input, #contact-us textarea{
+    display: block;
+    width:100%;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#contact-us .btn {
+    text-align: center;
+    margin-left: 0;
+    padding: 20px 0;
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/*contact*/
+
+.contact h4{
+    color: #ff530A;
+    padding: 18px 0;
+    font-weight: 500;
+}
+/*footer*/
+
+footer section{
+    margin-left: auto;
+    margin-right: auto;
+    width: 93%;
+    padding:60px 0;
+}
+
+.footer-blog h4 {
+    font-size: 1.2rem;
+    color: #ff530A;
+    font-weight: 600;
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+.footer-blog p{
+    line-height: 1.5;
+}
+
+footer p{
+    font-size: 0.9rem;
 }
 
 footer div {
-    margin-top: 40px;
+    margin: 50px 0;
 }
 
 footer h3 {
     padding-bottom: 20px;
-    margin: 0;
+    padding-top: 20px;
+    color: #2E2E2E;
+    font-weight: 600;
+}
+footer h3 span{
+    font-weight: 600;
 }
 
-ul {
+footer ul {
     list-style: none;
 }
 
 /*contact*/
 
+
 .contact li h4 i {
     color: #555;
     margin-right: 30px;
-    font-size: 20px;
 }
 
 /*photo*/
 
-.photo {
-    display: flex;
-}
-
-.photo li img {
+.photo li{
+    display: inline;
     margin-right: 20px;
 }
 
@@ -307,13 +456,21 @@ ul {
 
 /*copyright*/
 
-.copyright {
-    padding: 20px 0px;
-    background-color: lightgray;
+.copyright{
+    color: #454545;
+    padding: 20px 0;
+    margin: 0;
+    background-color: #E9E9E9;
     text-align: center;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    line-height: 1.2rem;
 }
 
 
-.copyright a {
+.copyright a {    
+    font-size: 0.8rem;
     text-decoration: none;
+    color: #ff530A;
 }
