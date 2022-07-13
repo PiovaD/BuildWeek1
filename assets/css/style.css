@@ -17,14 +17,24 @@ main p{
     padding-top: 40px;
 }
 
-h1,h2,h3{
+h1, h3, h3 span{
     font-size: 1.2rem;
-    font-weight: 400;
 }
 
-h3 span{
-    font-size: 1.2rem;
+h1, h2, h4{
     font-weight: 500;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3, h3 span{
+    font-weight: 600;
+}
+
+h4{
+    font-size: 1.15rem;
 }
 
 body,
@@ -149,7 +159,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 
 #slider h3{
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 #images {
     padding: 30px 0;
@@ -248,9 +258,12 @@ input[type="checkbox"]:checked~.nav-menu ul {
 #price span, #price h3{
     font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: 500;
-
 }
+
+#price h1 > span{
+    font-size: 1.8rem;
+}
+
 #price div{
     text-align: left;
     padding: 70px 0px;
@@ -278,6 +291,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 #price .btn{
+    font-weight: 600;
     float: right;
     color: #ff530a;
     background-color:white;
@@ -319,6 +333,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 #subscribe .btn{
+    letter-spacing: 2px;
     color: white;
     background-color: #7ec3bb;
     margin-top: 20px;
@@ -380,7 +395,6 @@ input[type="checkbox"]:checked~.nav-menu ul {
 .contact h4{
     color: #ff530A;
     padding: 18px 0;
-    font-weight: 500;
 }
 /*footer*/
 
@@ -400,6 +414,7 @@ footer section{
 }
 
 .footer-blog p{
+    color: #474747;
     line-height: 1.5;
 }
 
@@ -462,20 +477,23 @@ footer ul {
 /*copyright*/
 
 .copyright{
+    margin-bottom: 0;
+}
+
+.copyright p{
     color: #454545;
     padding: 20px 0;
-    margin: 0;
     background-color: #E9E9E9;
     text-align: center;
     font-weight: 600;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     line-height: 1.2rem;
 }
 
 
 .copyright a {    
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     text-decoration: none;
     color: #ff530A;
 }
