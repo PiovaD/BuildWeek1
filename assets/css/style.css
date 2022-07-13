@@ -4,36 +4,41 @@
     src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
 }
 
-span{
+span {
     color: #ff530A;
     font-weight: 600;
-    font-size:1.5rem;
+    font-size: 1.5rem;
 }
 
-main p{
+main p {
     font-size: 0.9rem;
     color: #959595;
     line-height: 1.5rem;
     padding-top: 40px;
 }
 
-h1, h3, h3 span{
+h1,
+h3,
+h3 span {
     font-size: 1.2rem;
 }
 
-h1, h2, h4{
+h1,
+h2,
+h4 {
     font-weight: 500;
 }
 
-h2{
+h2 {
     font-size: 1.5rem;
 }
 
-h3, h3 span{
+h3,
+h3 span {
     font-weight: 600;
 }
 
-h4{
+h4 {
     font-size: 1.15rem;
 }
 
@@ -51,8 +56,10 @@ a {
     text-decoration: none;
 }
 
-hr{
+hr {
     width: 100px;
+    margin-top: 0;
+    margin-bottom:0;
 }
 
 /*HEADER*/
@@ -136,16 +143,20 @@ input[type="checkbox"]:checked~.nav-menu ul {
     font-size: 1rem;
     color: #2E2E2E;
     margin-left: 15px;
+    
+    padding: 10px 0;   
+    border-bottom: 2px solid #e94c3d;
 }
 
 .nav-menu li {
     padding: 10px 0;
 }
+
 /*MAIN*/
 
 /*slider*/
 
-#slider{
+#slider {
     width: 93%;
     margin-left: auto;
     margin-right: auto;
@@ -153,14 +164,15 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 50px 0;
 }
 
-#slider div{
+#slider div {
     display: inline-flex;
 }
 
-#slider h3{
+#slider h3 {
     text-transform: uppercase;
     font-weight: 600;
 }
+
 #images {
     padding: 30px 0;
     margin-bottom: 20px;
@@ -173,19 +185,22 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 70px 0;
 }
 
-#restaurant div{
+#restaurant div {
     width: 93%;
     margin-left: auto;
     margin-right: auto;
 
 }
 
-#restaurant h1{
+#restaurant h1 {
     padding: 40px 0;
     line-height: 1.3;
 }
 
-#restaurant, #blog, #price, #subscribe{
+#restaurant,
+#blog,
+#price,
+#subscribe {
     text-align: center;
 }
 
@@ -200,14 +215,14 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding-bottom: 170px;
 }
 
-#blog h1{
+#blog h1 {
     color: white;
     padding-top: 100px;
     padding-bottom: 30px;
     position: relative;
 }
 
-#blog h3{
+#blog h3 {
     padding: 20px 0;
 }
 
@@ -221,10 +236,13 @@ input[type="checkbox"]:checked~.nav-menu ul {
 #blog li div {
     position: relative;
 }
+
 #blog ul li p {
     padding-top: 25px;
 }
-.cibi {
+
+.content-left, 
+.content-right {
     background-color: white;
     padding: 20px 35px;
 }
@@ -233,7 +251,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     width: 100%;
 }
 
-.btn{
+.btn {
     background-color: #ff530a;
     padding: 28px 85px;
     position: relative;
@@ -245,28 +263,38 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 /*price*/
-#price{
+#price {
     width: 93%;
     margin: auto auto;
-    padding: 70px 0px;
+    padding: 150px 0px;
+}
+#price .sotto{
+    display: none;
 }
 
-#price h1{
+#price h1 {
     padding: 40px 0;
 }
 
-#price span, #price h3{
+#price span,
+#price h3 {
     font-size: 1.2rem;
     text-transform: uppercase;
+    text-align: left;
 }
 
-#price h1 > span{
+#price h3{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+#price h1>span {
     font-size: 1.8rem;
 }
 
-#price div{
+#price .titolo{
     text-align: left;
-    padding: 70px 0px;
+    padding: 12px 0px;
 }
 
 #price li span {
@@ -278,30 +306,28 @@ input[type="checkbox"]:checked~.nav-menu ul {
     float: none;
 }
 
-#price li p{
-    padding: 12px 0;
+#price li p {    
+    text-align: left;
+    padding-bottom: 12px;
+    padding-top:0;
 }
 
-#price li{
+#price li {
     padding: 21px 0;
 }
 
-#price ul{
-    padding: 30px 0px;
-}
-
-#price .btn{
+#price .btn {
     font-weight: 600;
     float: right;
     color: #ff530a;
-    background-color:white;
+    background-color: white;
     border: 1px solid #ff530a;
-    margin:0;
+    margin: 0;
 }
 
 /*subscribe*/
 
-#subscribe{
+#subscribe {
     background-image: url(../images/subscribe-bg.jpg);
     background-repeat: no-repeat;
     position: relative;
@@ -310,29 +336,31 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding-bottom: 200px;
 }
 
-#subscribe h1, #subscribe p{
+#subscribe h1,
+#subscribe p {
     margin-left: auto;
     margin-right: auto;
     width: 93%;
     color: white;
     position: relative;
 }
-#subscribe h1{
+
+#subscribe h1 {
     text-transform: uppercase;
     padding: 120px 0 40px;
     font-size: 1.8rem;
 }
 
-#subscribe p{
+#subscribe p {
     padding: 25px 0;
     font-size: 1.12rem;
 }
 
-#subscribe span{
+#subscribe span {
     text-transform: none;
 }
 
-#subscribe .btn{
+#subscribe .btn {
     letter-spacing: 2px;
     color: white;
     background-color: #7ec3bb;
@@ -341,10 +369,11 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 25px 60px;
 }
 
-.form{
+.form {
     position: relative;
 }
-.form input {    
+
+.form input {
     width: 93%;
     height: 65px;
     opacity: 0.9;
@@ -355,30 +384,35 @@ input[type="checkbox"]:checked~.nav-menu ul {
 
 /*contact us*/
 
-#contact-us{
+#contact-us {
     position: relative;
     padding: 70px 0;
     max-width: 93%;
     margin: auto auto;
 }
 
-#contact-us h1{
+#contact-us h1 {
     padding: 40px 0;
     text-align: center;
 }
 
-#contact-us h3{
+#contact-us h3 {
     padding: 20px 0;
 }
 
-#contact-us input, #contact-us textarea{
+#contact-us input,
+#contact-us textarea {
     display: block;
-    width:100%;
+    width: 100%;
     font-family: youfont;
     font-size: 0.9rem;
     padding: 6px 12px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
+}
+
+#contact-us input{
+    height: 48px;
 }
 
 #contact-us .btn {
@@ -390,20 +424,52 @@ input[type="checkbox"]:checked~.nav-menu ul {
     font-size: 0.9rem;
 }
 
-/*contact*/
-
-.contact h4{
-    color: #ff530A;
-    padding: 18px 0;
-}
 /*footer*/
 
-footer section{
+footer section {
     margin-left: auto;
     margin-right: auto;
     width: 93%;
-    padding:60px 0;
+    padding: 60px 0;
 }
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer div {
+    margin: 50px 0;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer h3 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #2E2E2E;
+    font-weight: 600;
+}
+
+footer h3 span {
+    font-weight: 600;
+}
+
+/*contact*/
+
+.contact h4 {
+    color: #ff530A;
+    padding: 18px 0;
+}
+
+
+.contact li h4 i {
+    color: #555;
+    margin-right: 30px;
+}
+
+/*blog*/
 
 .footer-blog h4 {
     font-size: 1.2rem;
@@ -413,45 +479,19 @@ footer section{
     margin-top: 10px;
 }
 
-.footer-blog p{
+.footer-blog p {
     color: #474747;
     line-height: 1.5;
 }
 
-footer p{
-    font-size: 0.9rem;
-}
-
-footer div {
-    margin: 50px 0;
-}
-
-footer h3 {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    color: #2E2E2E;
-    font-weight: 600;
-}
-footer h3 span{
-    font-weight: 600;
-}
-
-footer ul {
-    list-style: none;
-}
-
-/*contact*/
-
-
-.contact li h4 i {
-    color: #555;
-    margin-right: 30px;
-}
-
 /*photo*/
 
-.photo li{
+.photo li {
     display: inline;
+}
+
+.photo li img{
+    
     margin-right: 20px;
 }
 
@@ -461,7 +501,7 @@ footer ul {
     display: flex;
 }
 
-.link li a{
+.link li a {
     display: block;
     display: flex;
     align-items: center;
@@ -476,11 +516,11 @@ footer ul {
 
 /*copyright*/
 
-.copyright{
+.copyright {
     margin-bottom: 0;
 }
 
-.copyright p{
+.copyright p {
     color: #454545;
     padding: 20px 0;
     background-color: #E9E9E9;
@@ -491,8 +531,7 @@ footer ul {
     line-height: 1.2rem;
 }
 
-
-.copyright a {    
+.copyright a {
     font-size: 0.95rem;
     text-decoration: none;
     color: #ff530A;
