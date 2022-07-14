@@ -28,7 +28,7 @@
         overflow: inherit;
     }
 
-    header .nav-menu li {
+    header .nav-menu li{
         display: inline;
         margin-left: 20px;
     }

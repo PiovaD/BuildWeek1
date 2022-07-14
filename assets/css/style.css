@@ -59,7 +59,7 @@ a {
 hr {
     width: 100px;
     margin-top: 0;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 /*HEADER*/
@@ -129,7 +129,7 @@ header .container {
 .nav-menu ul {
     height: 0;
     overflow: hidden;
-
+   
     transition: height 0.5s;
 }
 
@@ -144,9 +144,14 @@ input[type="checkbox"]:checked~.nav-menu ul {
     color: #2E2E2E;
     margin-left: 15px;
     
-    padding: 10px 0;   
+    
+    padding: 10px 0;
+}
+
+.nav-menu a:hover {
     border-bottom: 2px solid #e94c3d;
 }
+
 
 .nav-menu li {
     padding: 10px 0;
@@ -164,8 +169,27 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 50px 0;
 }
 
+#images{    
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+#images img{
+    margin: 0;
+}
+
 #slider div {
-    display: inline-flex;
+    position: relative;
+    width: 100%;
+}
+
+#slider div i {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #AA9D84;
+    font-size: 1.8rem;
+    cursor: pointer;
 }
 
 #slider h3 {
@@ -241,7 +265,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding-top: 25px;
 }
 
-.content-left, 
+.content-left,
 .content-right {
     background-color: white;
     padding: 20px 35px;
@@ -262,13 +286,21 @@ input[type="checkbox"]:checked~.nav-menu ul {
 
 }
 
+.btn:hover {
+    background-color:transparent;
+    border: 1px solid #ff530a;
+    color: #ff530a;
+    transition: 0.5s;
+}
+
 /*price*/
 #price {
     width: 93%;
     margin: auto auto;
     padding: 150px 0px;
 }
-#price .sotto{
+
+#price .sotto {
     display: none;
 }
 
@@ -283,7 +315,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     text-align: left;
 }
 
-#price h3{
+#price h3 {
     padding-top: 100px;
     padding-bottom: 30px;
 }
@@ -292,7 +324,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     font-size: 1.8rem;
 }
 
-#price .titolo{
+#price .titolo {
     text-align: left;
     padding: 12px 0px;
 }
@@ -306,10 +338,10 @@ input[type="checkbox"]:checked~.nav-menu ul {
     float: none;
 }
 
-#price li p {    
+#price li p {
     text-align: left;
     padding-bottom: 12px;
-    padding-top:0;
+    padding-top: 0;
 }
 
 #price li {
@@ -323,6 +355,12 @@ input[type="checkbox"]:checked~.nav-menu ul {
     background-color: white;
     border: 1px solid #ff530a;
     margin: 0;
+}
+
+#price .btn:hover{
+    background-color: #ff530a;
+    color:white;
+    transition: 0.5s;
 }
 
 /*subscribe*/
@@ -369,6 +407,12 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 25px 60px;
 }
 
+#subscribe .btn:hover{
+    background-color: #5d918b;
+    border: none;
+    transition: 0.5s;
+}
+
 .form {
     position: relative;
 }
@@ -411,7 +455,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     border: 1px solid #ccc;
 }
 
-#contact-us input{
+#contact-us input {
     height: 48px;
 }
 
@@ -490,8 +534,8 @@ footer h3 span {
     display: inline;
 }
 
-.photo li img{
-    
+.photo li img {
+
     margin-right: 20px;
 }
 
@@ -514,6 +558,11 @@ footer h3 span {
     margin-right: 20px;
 }
 
+.link li a:hover {
+    background: #ff530a;
+    transition: 0.5s;
+}
+
 /*copyright*/
 
 .copyright {
@@ -534,5 +583,10 @@ footer h3 span {
 .copyright a {
     font-size: 0.95rem;
     text-decoration: none;
-    color: #ff530A;
+    color: #ff530a;
+}
+
+.copyright a:hover{
+    color: rgb(255, 132, 10);
+    transition: 0.5s;
 }
