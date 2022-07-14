@@ -52,6 +52,12 @@
         width: 720px;
     }
 
+    /*iserire il padding occhio al data left che prende senza padding*/
+
+    #slider #images .img{
+        padding-right: 15px;
+    }
+
     span,
     #price h1>span {
         font-size: 2.8rem;
