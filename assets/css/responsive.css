@@ -52,9 +52,7 @@
         width: 720px;
     }
 
-    /*iserire il padding occhio al data left che prende senza padding*/
-
-    #slider #images .img{
+    #slider #images .slide-img{
         padding-right: 15px;
     }
 
@@ -219,6 +217,10 @@
         margin-left: auto;
         margin-right: auto;
         width: 940px;
+    }
+
+    #slider #images .slide-img{
+        padding-right: 30px;
     }
 
     #blog ul {
