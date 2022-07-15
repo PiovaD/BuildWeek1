@@ -1,4 +1,5 @@
 /*GENERAL*/
+
 @font-face {
     font-family: youfont;
     src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
@@ -63,6 +64,7 @@ hr {
 }
 
 /*HEADER*/
+
 .header-img {
     max-width: 100%;
 }
@@ -129,7 +131,7 @@ header .container {
 .nav-menu ul {
     height: 0;
     overflow: hidden;
-   
+
     transition: height 0.5s;
 }
 
@@ -143,13 +145,26 @@ input[type="checkbox"]:checked~.nav-menu ul {
     font-size: 1rem;
     color: #2E2E2E;
     margin-left: 15px;
-    
-    
     padding: 10px 0;
+
+    position: relative;
 }
 
-.nav-menu a:hover {
-    border-bottom: 2px solid #e94c3d;
+.nav-menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff530A;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transition: width .3s;
+}
+
+.nav-menu ul li a:hover::after {
+    width: 100%;
 }
 
 
@@ -169,12 +184,12 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 50px 0;
 }
 
-#images{    
+#images {
     white-space: nowrap;
     transition: all 0.3s;
 }
 
-#images img{
+#images img {
     margin: 0;
 }
 
@@ -257,8 +272,13 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 40px 0;
 }
 
-#blog li div {
+#blog .block li div {
     position: relative;
+
+}
+
+.overf {
+    overflow: hidden;
 }
 
 #blog ul li p {
@@ -275,6 +295,16 @@ input[type="checkbox"]:checked~.nav-menu ul {
     width: 100%;
 }
 
+#blog .block ul li:hover img {
+    transform: scale(1.25) rotate(10deg);
+
+}
+
+#blog .block ul li img {
+    transition: all 0.8s ease-out;
+
+}
+
 .btn {
     background-color: #ff530a;
     padding: 28px 85px;
@@ -287,13 +317,18 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 .btn:hover {
-    background-color:transparent;
+    background-color: transparent;
     border: 1px solid #ff530a;
     color: #ff530a;
     transition: 0.5s;
 }
 
+#blog .btn:hover {
+    border-radius: 10px;
+}
+
 /*price*/
+
 #price {
     width: 93%;
     margin: auto auto;
@@ -329,6 +364,11 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 12px 0px;
 }
 
+#price li span:hover,
+#price .titolo:hover {
+    color: #ff530a;
+}
+
 #price li span {
     color: #938463;
     font-size: 0.9rem;
@@ -357,9 +397,9 @@ input[type="checkbox"]:checked~.nav-menu ul {
     margin: 0;
 }
 
-#price .btn:hover{
+#price .btn:hover {
     background-color: #ff530a;
-    color:white;
+    color: white;
     transition: 0.5s;
 }
 
@@ -407,9 +447,10 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 25px 60px;
 }
 
-#subscribe .btn:hover{
+#subscribe .btn:hover {
     background-color: #5d918b;
     border: none;
+    box-shadow: 0px 0px 30px 15px white;
     transition: 0.5s;
 }
 
@@ -424,7 +465,6 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 12px 6px;
     border: none;
 }
-
 
 /*contact us*/
 
@@ -507,17 +547,21 @@ footer h3 span {
     padding: 18px 0;
 }
 
-
 .contact li h4 i {
     color: #555;
     margin-right: 30px;
+}
+
+.contact li h4 i:hover {
+    color: #ff530a;
+    transition: 0.5s;
 }
 
 /*blog*/
 
 .footer-blog h4 {
     font-size: 1.2rem;
-    color: #ff530A;
+    color: #ff530a;
     font-weight: 600;
     padding: 15px 0;
     margin-top: 10px;
@@ -535,8 +579,14 @@ footer h3 span {
 }
 
 .photo li img {
-
     margin-right: 20px;
+}
+
+.photo img:hover {
+    box-shadow: 0px 0px 30px 3px #ff530a;
+    width: 75px;
+    height: 75px;
+    transition: 0.5s;
 }
 
 /*link*/
@@ -561,6 +611,8 @@ footer h3 span {
 .link li a:hover {
     background: #ff530a;
     transition: 0.5s;
+    width: 50px;
+    height: 50px;
 }
 
 /*copyright*/
@@ -586,7 +638,21 @@ footer h3 span {
     color: #ff530a;
 }
 
-.copyright a:hover{
-    color: rgb(255, 132, 10);
+.copyright a:hover {
+    font-size: 1.5rem;
     transition: 0.5s;
+}
+
+/*scroll*/
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
 }

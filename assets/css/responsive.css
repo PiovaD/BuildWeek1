@@ -82,6 +82,8 @@
         line-height: 26px;
         float: right;
         position: relative;
+        z-index: 1;
+
     }
 
     #blog .block ul li .content-right:after {
@@ -94,13 +96,15 @@
         width: 30px;
         height: 30px;
         margin-top: -15px;
-        background: #fff;
+        background: white;
         transform: rotate(45deg);
         margin-left: -15px;
     }
 
     #blog .block ul li .content-left {
         padding: 40px 35px 23px;
+        font-size: 16px;
+        line-height: 26px;
         float: left;
         position: relative;
         z-index: 1;
@@ -114,8 +118,9 @@
         width: 30px;
         height: 30px;
         margin-top: 0px;
-        background: #fff;
+        background: white;
         transform: rotate(45deg);
+
     }
 
     #price .titolo {
@@ -242,10 +247,13 @@
         background-color: white;
     }
 
-
     #blog .btn {
         float: right;
         margin: 0;
+    }
+
+    #blog .btn:hover{
+        border-radius: 0;
     }
 
     #contact-us .btn {
