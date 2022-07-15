@@ -198,7 +198,6 @@ function setActive(n) {
     allDot[n].classList.add("active-dot");
 }
 
-
 //!!!!!!in caso di resize della finestra i dot smettono di funzionare!!!!!!!!
 
 //modifica lo spostamento cliccando sui dot
