@@ -184,16 +184,26 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 50px 0;
 }
 
-#images {
-    white-space: nowrap;
-    transition: all 0.3s;
+#images {    
+    display: grid;
+    grid-auto-flow: column;
+    transition: all 0.5s;
 }
 
 #images img {
     margin: 0;
+
+#images .slide-img {
+    height: 220px;
 }
 
-#slider div {
+#images .slide-img img {
+    object-fit: fill;
+    width: 100%;
+    height: inherit
+}
+
+#slider .works {
     position: relative;
     width: 100%;
 }
@@ -210,6 +220,26 @@ input[type="checkbox"]:checked~.nav-menu ul {
 #slider h3 {
     text-transform: uppercase;
     font-weight: 600;
+}
+
+#slider .dot-container{
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slider .dot-container .dot{    
+    background: #DADADA;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+    cursor: pointer;
+}
+
+#slider .dot-container .dot.active-dot{
+    background: #FF5333;
 }
 
 #images {
