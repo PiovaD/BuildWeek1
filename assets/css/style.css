@@ -400,6 +400,11 @@ input[type="checkbox"]:checked~.nav-menu ul {
     color: #ff530a;
 }
 
+#price li span:hover .titolo,
+#price .titolo:hover span{
+    color: #ff530a;
+}
+
 #price li span {
     color: #938463;
     font-size: 0.9rem;
