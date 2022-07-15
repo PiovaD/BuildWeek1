@@ -28,7 +28,7 @@
         overflow: inherit;
     }
 
-    header .nav-menu li{
+    header .nav-menu li {
         display: inline;
         margin-left: 20px;
     }
@@ -52,7 +52,7 @@
         width: 720px;
     }
 
-    #slider #images .slide-img{
+    #slider #images .slide-img {
         padding-right: 15px;
     }
 
@@ -224,7 +224,7 @@
         width: 940px;
     }
 
-    #slider #images .slide-img{
+    #slider #images .slide-img {
         padding-right: 30px;
     }
 
@@ -260,7 +260,7 @@
         margin: 0;
     }
 
-    #blog .btn:hover{
+    #blog .btn:hover {
         border-radius: 0;
     }
 
