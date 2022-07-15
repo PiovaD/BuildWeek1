@@ -129,7 +129,7 @@ header .container {
 .nav-menu ul {
     height: 0;
     overflow: hidden;
-   
+
     transition: height 0.5s;
 }
 
@@ -143,8 +143,8 @@ input[type="checkbox"]:checked~.nav-menu ul {
     font-size: 1rem;
     color: #2E2E2E;
     margin-left: 15px;
-    
-    
+
+
     padding: 10px 0;
 }
 
@@ -169,16 +169,23 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 50px 0;
 }
 
-#images{    
-    white-space: nowrap;
-    transition: all 0.3s;
+#images {
+    display: grid;
+    grid-auto-flow: column;
+    transition: all 0.5s;
 }
 
-#images img{
-    margin: 0;
+#images .slide-img {
+    height: 220px;
 }
 
-#slider div {
+#images .slide-img img {
+    object-fit: fill;
+    width: 100%;
+    height: inherit
+}
+
+#slider .works {
     position: relative;
     width: 100%;
 }
@@ -195,6 +202,26 @@ input[type="checkbox"]:checked~.nav-menu ul {
 #slider h3 {
     text-transform: uppercase;
     font-weight: 600;
+}
+
+#slider .dot-container{
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slider .dot-container .dot{    
+    background: #DADADA;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+    cursor: pointer;
+}
+
+#slider .dot-container .dot.active-dot{
+    background: #FF5333;
 }
 
 #images {
@@ -287,7 +314,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 .btn:hover {
-    background-color:transparent;
+    background-color: transparent;
     border: 1px solid #ff530a;
     color: #ff530a;
     transition: 0.5s;
@@ -357,9 +384,9 @@ input[type="checkbox"]:checked~.nav-menu ul {
     margin: 0;
 }
 
-#price .btn:hover{
+#price .btn:hover {
     background-color: #ff530a;
-    color:white;
+    color: white;
     transition: 0.5s;
 }
 
@@ -407,7 +434,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 25px 60px;
 }
 
-#subscribe .btn:hover{
+#subscribe .btn:hover {
     background-color: #5d918b;
     border: none;
     transition: 0.5s;
@@ -586,7 +613,7 @@ footer h3 span {
     color: #ff530a;
 }
 
-.copyright a:hover{
+.copyright a:hover {
     color: rgb(255, 132, 10);
     transition: 0.5s;
 }

@@ -52,6 +52,10 @@
         width: 720px;
     }
 
+    #slider #images .slide-img{
+        padding-right: 15px;
+    }
+
     span,
     #price h1>span {
         font-size: 2.8rem;
@@ -213,6 +217,10 @@
         margin-left: auto;
         margin-right: auto;
         width: 940px;
+    }
+
+    #slider #images .slide-img{
+        padding-right: 30px;
     }
 
     #blog ul {
