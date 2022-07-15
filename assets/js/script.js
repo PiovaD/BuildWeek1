@@ -1,36 +1,14 @@
-/*nav-menu*/
-/*
-const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("nav .nav-menu ul li");
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 1) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLi.forEach((li) => {
-    li.classList.remove("active");
-    if (li.classList.contains(current)) {
-      li.classList.add("active");
-    }
-  });
-});*/
-
 window.addEventListener("scroll", reveal);
 reveal();
 
 /*scroll*/
 
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 30;
+    let reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 30;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         } else {
@@ -38,6 +16,41 @@ function reveal() {
         }
     }
 }
+
+//nav menu 
+window.addEventListener("scroll", hoverMenu);
+hoverMenu();
+
+function hoverMenu() {
+    let navItems = document.querySelectorAll(".nav-item");
+    let navMenu = document.querySelectorAll(".item");
+    let isFirstLoop = true;
+
+    for (let i = 0; i < navItems.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = navItems[i].getBoundingClientRect().top;
+        let elementVisible = 800;
+        if (elementTop < windowHeight - elementVisible) {
+            navMenu[i].classList.add("nav-active");
+
+            if (isFirstLoop && i == navItems.length - 1) {
+                for (let j = (i - 1); j >= 0; j--) {
+                    navMenu[j].classList.remove("nav-active");
+                }
+                isFirstLoop = false;
+            }
+        } else {
+            if (isFirstLoop) {
+                for (let j = (i - 2); j >= 0; j--) {
+                    navMenu[j].classList.remove("nav-active");
+                }
+                isFirstLoop = false;
+            }
+            navMenu[i].classList.remove("nav-active");
+        }
+    }
+}
+
 
 //slider
 document.querySelector('.right').addEventListener('click', function () {
@@ -146,7 +159,6 @@ document.querySelector('.right').addEventListener('click', function () {
     }
 
     dotContainer.setAttribute('data-iter', iter)
-
 })();
 
 //setta le larghezze agli elementi dello slider
@@ -186,77 +198,80 @@ function setActive(n) {
     allDot[n].classList.add("active-dot");
 }
 
-//spostare chimata in even listner
+
+//!!!!!!in caso di resize della finestra i dot smettono di funzionare!!!!!!!!
 
 //modifica lo spostamento cliccando sui dot
 document.querySelectorAll('.dot').forEach(function (dot) {
-    dot.addEventListener('click', function () {
+    dot.addEventListener('click',
 
-        let wrapper = document.querySelector('#images');
-        let left = parseInt(wrapper.getAttribute('data-left'));
-        let sWidth = wrapper.clientWidth;
+        function () {
 
-        let img = wrapper.querySelectorAll('.slide-img');;
-        let imgWidth = img[0].clientWidth;
+            let wrapper = document.querySelector('#images');
+            let left = parseInt(wrapper.getAttribute('data-left'));
+            let sWidth = wrapper.clientWidth;
 
-        let dotContainer = document.querySelector(".dot-container")
-        let iter = dotContainer.getAttribute('data-iter');
-        let allDot = document.querySelectorAll(".dot");
+            let img = wrapper.querySelectorAll('.slide-img');;
+            let imgWidth = img[0].clientWidth;
 
-        let gravity = this.getAttribute('data-gravity');
+            let dotContainer = document.querySelector(".dot-container")
+            let iter = dotContainer.getAttribute('data-iter');
+            let allDot = document.querySelectorAll(".dot");
 
-        const IMGSTYLE = window.getComputedStyle(img[0], null);
-        const PADDINGSTRING = IMGSTYLE.getPropertyValue("padding-right");
-        const PADDING = parseInt(PADDINGSTRING.replace(/[^0-9.]/g, ""))
+            let gravity = this.getAttribute('data-gravity');
 
-        if (gravity == 1) {
-            left = 0;
-            iter = 1;
-            setActive(iter - 1);
+            const IMGSTYLE = window.getComputedStyle(img[0], null);
+            const PADDINGSTRING = IMGSTYLE.getPropertyValue("padding-right");
+            const PADDING = parseInt(PADDINGSTRING.replace(/[^0-9.]/g, ""))
 
-        } else if (gravity == allDot.length) {
+            if (gravity == 1) {
+                left = 0;
+                iter = 1;
+                setActive(iter - 1);
 
-            while (left < (img.length * (imgWidth - PADDING)) - sWidth) {
+            } else if (gravity == allDot.length) {
 
-                left += parseInt(imgWidth);
+                while (left < (img.length * (imgWidth - PADDING)) - sWidth) {
 
-                if ((left / imgWidth) * imgWidth >=
-                    (img.length * (imgWidth - PADDING) / allDot.length) * iter) {
-                    iter++;
+                    left += parseInt(imgWidth);
+
+                    if ((left / imgWidth) * imgWidth >=
+                        (img.length * (imgWidth - PADDING) / allDot.length) * iter) {
+                        iter++;
+                    }
+
+                    setActive(iter - 1);
                 }
 
-                setActive(iter - 1);
+            } else {
+
+                console.log((img.length / allDot.length) * (gravity - 1));
+
+                left = 0;
+                iter = 1;
+
+                wrapper.style.transform = "translate(-" + left + "px ,0)"
+
+                for (i = 0; i < (img.length / allDot.length) * (gravity - 1); i++) {
+
+                    left += parseInt(imgWidth);
+
+                    if ((left / imgWidth) * imgWidth >=
+                        (img.length * (imgWidth - PADDING) / allDot.length) * iter) {
+                        iter++;
+                    }
+
+                    setActive(iter - 1);
+                }
+
             }
-
-        } else {
-
-            console.log((img.length / allDot.length) * (gravity - 1));
-
-            left = 0;
-            iter = 1;
 
             wrapper.style.transform = "translate(-" + left + "px ,0)"
+            wrapper.setAttribute('data-left', left)
 
-            for (i = 0; i < (img.length / allDot.length) * (gravity - 1); i++) {
+            dotContainer.setAttribute('data-iter', iter)
 
-                left += parseInt(imgWidth);
-
-                if ((left / imgWidth) * imgWidth >=
-                    (img.length * (imgWidth - PADDING) / allDot.length) * iter) {
-                    iter++;
-                }
-
-                setActive(iter - 1);
-            }
-
-        }
-
-        wrapper.style.transform = "translate(-" + left + "px ,0)"
-        wrapper.setAttribute('data-left', left)
-
-        dotContainer.setAttribute('data-iter', iter)
-
-    });
+        });
 });
 
 
