@@ -42,12 +42,12 @@
             <nav class="nav-menu">
 
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#restaurant">About us</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#price">Menu</a></li>
-                    <li><a href="#subscribe">News</a></li>
-                    <li><a href="#contact-us">Contacts</a></li>
+                    <li class="item"><a href="#">Home</a><span></span></li>
+                    <li class="item"><a href="#restaurant">About us</a><span></span></li>
+                    <li class="item"><a href="#blog">Blog</a><span></span></li>
+                    <li class="item"><a href="#price">Menu</a><span></span></li>
+                    <li class="item"><a href="#subscribe">News</a><span></span></li>
+                    <li class="item"><a href="#contact-us">Contacts</a><span></span></li>
                 </ul>
 
             </nav>
@@ -57,7 +57,7 @@
     </header>
 
     <main>
-        <section id="slider" class="reveal">
+        <section id="slider" class="reveal nav-item" > 
 
             <div class="works">
                 <h3>Featured <span>Works</span></h3>
@@ -83,12 +83,11 @@
 
             </div>
 
-            <div class="dot-container" data-iter="1">
-            </div>
+            <div class="dot-container" data-iter="1"></div>
 
         </section>
 
-        <section id="restaurant" class="reveal">
+        <section id="restaurant" class="reveal nav-item">
 
             <div>
 
@@ -107,7 +106,7 @@
 
         </section>
 
-        <section id="blog">
+        <section id="blog" class="nav-item">
 
             <div class="overlay"></div>
 
@@ -189,7 +188,7 @@
         </section>
 
 
-        <section id="price">
+        <section id="price" class="nav-item">
 
             <div class="reveal">
                 <h1>our <span>menu </span>the <span>price</span></h1>
@@ -288,7 +287,7 @@
 
         </section>
 
-        <section id="subscribe">
+        <section id="subscribe" class="nav-item">
             <div class="overlay"></div>
 
             <div class="reveal">
@@ -302,8 +301,8 @@
                 <div>
 
                     <form class="form" nome="contacts">
-                        <input type="text" placeholder="Enter your email to subscribe...">
-                        <a class="btn" href="#">SUBSCRIBE</a>
+                        <input type="text" placeholder="Enter your email to subscribe..." required>
+                        <input type="submit" class="btn" value="SUBSCRIBE">
                     </form>
 
                 </div>
@@ -312,7 +311,7 @@
 
         </section>
 
-        <section id="contact-us">
+        <section id="contact-us" class = "nav-item">
 
             <div class="reveal">
                 <h1>our <span>CONTACT US</span></h1>
@@ -330,11 +329,10 @@
                 <div class="reveal">
                     <textarea rows="8" name="write here" placeholder="Write your message here..."></textarea>
                 </div>
+                <div class="reveal">
+                    <input type="submit" class="btn" value="SEND YOUR MESSAGE">
+                </div>
             </form>
-
-            <div class="reveal">
-                <a class="btn" href="#" target="_blank">SEND YOUR MESSAGE</a>
-            </div>
 
         </section>
 
@@ -352,17 +350,20 @@
 
                     <li>
                         <h4> <i class="fa fa-phone"></i> Telefone </h4>
-                        <p>(000) 123 456 78- (000) 123 4567 89</p>
+                        <p><a href="tel:(000) 123 456 78" target="_blank">(000) 123 456 78</a> - <a
+                                href="tel:(000) 123 4567 89" target="_blank">(000) 123 4567 89</a></p>
                     </li>
 
                     <li>
                         <h4> <i class="fa fa-map-marker"></i> Address </h4>
-                        <p>2046 Blue Spruce Lane Laurel Canada</p>
+                        <p><a href="https://www.google.com/maps/search/2046+Blue+Spruce+Lane+Laurel+Canada"
+                                target="_blank">2046 Blue Spruce Lane Laurel Canada</a></p>
                     </li>
 
                     <li>
                         <h4> <i class="fa fa-envelope"></i> E mail </h4>
-                        <p>rest@gmail.com - rest@mail.ru</p>
+                        <p><a href="mailto: rest@gmail.com" target="_blank">rest@gmail.com</a> - <a
+                                href="mailto: rest@mail.ru" target="_blank">rest@mail.ru</a></p>
                     </li>
 
                 </ul>

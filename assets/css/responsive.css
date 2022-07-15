@@ -171,15 +171,14 @@
 
     }
 
-    .form input {
-        flex: 0 1 450px;
+    .form input[type=text] {
+        flex: 0 0 450px;
     }
 
     #subscribe .form .btn {
         position: inherit;
         margin: 0;
-        padding: 24px 60px;
-        flex-grow: 1;
+        flex-grow: 0;
     }
 
     #contact-us {

@@ -147,13 +147,11 @@ input[type="checkbox"]:checked~.nav-menu ul {
     margin-left: 15px;
     padding: 10px 0;
 
-    position: relative;
 }
 
-.nav-menu ul li a::after {
-    content: '';
+.nav-menu ul li span{
     display: block;
-    width: 0;
+    width: 0%;
     height: 2px;
     background: #ff530A;
     position: absolute;
@@ -163,13 +161,15 @@ input[type="checkbox"]:checked~.nav-menu ul {
     transition: width .3s;
 }
 
-.nav-menu ul li a:hover::after {
+.nav-menu li.item:hover span,
+.nav-menu li.nav-active span{
     width: 100%;
 }
 
-
 .nav-menu li {
     padding: 10px 0;
+    
+    position: relative;
 }
 
 /*MAIN*/
@@ -401,7 +401,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 #price li span:hover .titolo,
-#price .titolo:hover span{
+#price .titolo:hover span {
     color: #ff530a;
 }
 
@@ -475,12 +475,17 @@ input[type="checkbox"]:checked~.nav-menu ul {
 }
 
 #subscribe .btn {
+    width: auto;
+    font-family: youfont;
+    text-decoration: none;
     letter-spacing: 2px;
+    font-size: 1rem;
     color: white;
     background-color: #7ec3bb;
     margin-top: 20px;
     font-weight: 600;
     padding: 25px 60px;
+    opacity: 1;
 }
 
 #subscribe .btn:hover {
@@ -520,7 +525,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     padding: 20px 0;
 }
 
-#contact-us input,
+#contact-us input[type=text],
 #contact-us textarea {
     display: block;
     width: 100%;
@@ -531,7 +536,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     border: 1px solid #ccc;
 }
 
-#contact-us input {
+#contact-us input[type=text] {
     height: 48px;
 }
 
@@ -542,6 +547,7 @@ input[type="checkbox"]:checked~.nav-menu ul {
     width: 100%;
     font-weight: 600;
     font-size: 0.9rem;
+    border: none;
 }
 
 /*footer*/
@@ -555,6 +561,12 @@ footer section {
 
 footer p {
     font-size: 0.9rem;
+}
+
+footer p a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #000;
 }
 
 footer div {
