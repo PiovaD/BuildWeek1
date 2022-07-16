@@ -30,20 +30,16 @@ function hoverMenu() {
         let windowHeight = window.innerHeight;
         let elementTop = navItems[i].getBoundingClientRect().top;
         let elementVisible = 800;
-        if (elementTop < windowHeight - elementVisible) {
-            navMenu[i].classList.add("nav-active");
 
-            if (isFirstLoop && i == navItems.length - 1) {
-                for (let j = (i - 1); j >= 0; j--) {
-                    navMenu[j].classList.remove("nav-active");
-                }
+        if (elementTop < windowHeight - elementVisible) {
+            navMenu[i].classList.remove("nav-active");
+           if (isFirstLoop && i == navItems.length - 1) {
+                navMenu[i].classList.add("nav-active");
                 isFirstLoop = false;
             }
         } else {
-            if (isFirstLoop) {
-                for (let j = (i - 2); j >= 0; j--) {
-                    navMenu[j].classList.remove("nav-active");
-                }
+           if (isFirstLoop && i > 0) {
+                navMenu[i - 1].classList.add("nav-active");
                 isFirstLoop = false;
             }
             navMenu[i].classList.remove("nav-active");
