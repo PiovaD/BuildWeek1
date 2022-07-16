@@ -94,7 +94,11 @@ document.querySelector('.right').addEventListener('click', function () {
 *  e nel caso fosse stato effettuato uno spostamento lo mantine
 */
 
-(window.onresize = function () {
+window.onresize = function () { //permette il funzionamento dei dot dopo il resize della pagina
+    location.reload(false);
+};
+
+(function () {
 
     let wrapper = document.querySelector('#images');
     let img = wrapper.querySelectorAll('.slide-img');;
