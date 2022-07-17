@@ -33,12 +33,12 @@ function hoverMenu() {
 
         if (elementTop < windowHeight - elementVisible) {
             navMenu[i].classList.remove("nav-active");
-           if (isFirstLoop && i == navItems.length - 1) {
+            if (isFirstLoop && i == navItems.length - 1) {
                 navMenu[i].classList.add("nav-active");
                 isFirstLoop = false;
             }
         } else {
-           if (isFirstLoop && i > 0) {
+            if (isFirstLoop && i > 0) {
                 navMenu[i - 1].classList.add("nav-active");
                 isFirstLoop = false;
             }
@@ -94,8 +94,12 @@ document.querySelector('.right').addEventListener('click', function () {
 *  e nel caso fosse stato effettuato uno spostamento lo mantine
 */
 
+let oldWidth = window.innerWidth;
+
 window.onresize = function () { //permette il funzionamento dei dot dopo il resize della pagina
-    location.reload(false);
+    if (oldWidth != window.innerWidth) {
+        location.reload(false);
+    }
 };
 
 (function () {
